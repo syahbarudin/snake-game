@@ -319,6 +319,11 @@ function App() {
         </div>
 
         <aside className="help-card">
+          <div className="nostalgia-note">
+            <span className="nostalgia-label">SEDIKIT NOSTALGIA</span>
+            <p>Dulu main di layar kecil. Sekarang, serunya tetap sama.</p>
+            <span className="nostalgia-caption">SATU MAKANAN LAGI. SATU REKOR BARU.</span>
+          </div>
           <div className="help-heading">
             <span className="help-icon">⌘</span>
             <div><h2>Kontrol permainan</h2><p>Gerakkan ular dengan lincah.</p></div>
@@ -337,7 +342,7 @@ function App() {
       </section>
 
       <footer className="page-footer">
-        <span>BUAT KAMU YANG KANGEN GAME KLASIK.</span>
+        <span className="watermark">Created by Syahbarudin Abdillah</span>
         <button
           className="restart-button"
           onClick={() => {

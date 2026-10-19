@@ -134,6 +134,11 @@ h1 span { color: var(--green); }
 .speed-label i { width: 6px; height: 6px; border-top: 1px solid var(--green); border-right: 1px solid var(--green); transform: rotate(45deg); }
 
 .help-card { align-self: end; margin-bottom: 13px; padding: 17px 15px; background: #171b17; border: 1px solid #2b3029; border-radius: 8px; }
+.nostalgia-note { margin: 0 0 20px; padding: 15px 13px 14px; border: 1px solid #343b2e; border-radius: 6px; background: linear-gradient(135deg, #20271a, #191d17 70%); }
+.nostalgia-label, .nostalgia-caption { color: #909987; font-family: var(--mono); font-size: 7px; letter-spacing: 1px; }
+.nostalgia-label { color: var(--green); }
+.nostalgia-note p { margin: 9px 0; color: #e4e8dd; font-size: 13px; line-height: 1.6; }
+.nostalgia-caption { font-size: 6px; color: #7f8876; }
 .help-heading { display: flex; gap: 10px; align-items: flex-start; }
 .help-icon { width: 24px; height: 24px; flex: 0 0 24px; display: grid; place-items: center; color: var(--green); border: 1px solid #384230; border-radius: 5px; font-size: 14px; }
 .help-heading h2 { font-size: 11px; margin: 2px 0 3px; font-weight: 600; }
@@ -147,6 +152,7 @@ h1 span { color: var(--green); }
 .shortcut-row span { flex: 1; }
 kbd { min-width: 19px; height: 18px; display: grid; place-items: center; color: #c3c9bc; font: 8px var(--mono); background: #232821; border: 1px solid #383e35; border-radius: 3px; }
 .page-footer { min-height: 59px; border-top: 1px solid #252a24; display: flex; justify-content: space-between; align-items: center; color: #777e73; font-size: 8px; }
+.watermark { color: #858c81; font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: .25px; }
 .restart-button { display: flex; gap: 8px; align-items: center; color: #a0a79a; background: none; border: 0; font-size: 8px; cursor: pointer; }
 .restart-button:hover { color: var(--green); }
 .restart-button span { font-family: sans-serif; font-size: 16px; }
@@ -164,19 +170,24 @@ kbd { min-width: 19px; height: 18px; display: grid; place-items: center; color: 
   .topbar { height: 66px; }
   .game-layout { display: flex; flex-direction: column; align-items: stretch; gap: 14px; padding: 18px 0 22px; }
   .game-intro { width: 100%; align-self: stretch; display: flex; align-items: center; }
+  .game-intro { order: -2; }
   .eyebrow, .game-intro h1, .intro-copy, .status-line { display: none; }
   .stats-row { width: 100%; justify-content: space-between; gap: 14px; padding: 0 4px; }
   .stat-label { font-size: 8px; }
   .stat-card strong { font-size: 21px; }
   .stat-divider { height: 27px; }
-  .game-panel { padding: 9px; }
+  .game-panel { order: 0; padding: 9px; }
   .panel-top { height: 44px; align-items: flex-start; justify-content: flex-end; }
   .panel-label, .panel-bottom { display: none; }
   .icon-button { width: 38px; height: 34px; border: 1px solid #373d34; border-radius: 6px; background: #20251e; font-size: 14px; touch-action: manipulation; }
   .icon-button:active { color: var(--green); border-color: var(--green); }
   .help-card { display: contents; }
+  .nostalgia-note { order: -1; margin: 0; padding: 9px 11px; display: block; border-radius: 7px; }
+  .nostalgia-label { display: block; font-size: 6px; }
+  .nostalgia-note p { margin: 5px 0 0; font-size: 11px; line-height: 1.4; }
+  .nostalgia-caption { display: none; }
   .help-heading, .shortcut-row { display: none; }
-  .key-controls { width: 100%; margin: 0; padding: 12px 10px 10px; gap: 9px; background: #171b17; border: 1px solid #30362e; border-radius: 9px; }
+  .key-controls { order: 1; width: 100%; margin: 0; padding: 12px 10px 10px; gap: 9px; background: #171b17; border: 1px solid #30362e; border-radius: 9px; }
   .key-controls > div { width: 100%; gap: 9px; }
   .key-controls button { width: calc((100% - 18px) / 3); height: 58px; border-radius: 8px; font-size: 23px; touch-action: manipulation; }
   .key-controls > div button { flex: 1; height: 68px; }
