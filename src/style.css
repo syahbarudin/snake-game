@@ -142,6 +142,7 @@ h1 span { color: var(--green); }
 .key-controls > div { display: flex; gap: 4px; }
 .key-controls button { width: 31px; height: 29px; border: 1px solid #373d34; border-radius: 4px; color: #d1d7ca; background: #20251e; box-shadow: 0 2px 0 #0d100c; cursor: pointer; line-height: 1; touch-action: manipulation; user-select: none; }
 .key-controls button:hover { color: var(--green); border-color: #778d52; }
+.key-controls button:active { color: var(--green); border-color: var(--green); background: #303a27; transform: translateY(1px); box-shadow: none; }
 .shortcut-row { display: flex; align-items: center; gap: 5px; min-height: 30px; border-top: 1px solid #292e27; color: #858c81; font-size: 7px; letter-spacing: .5px; }
 .shortcut-row span { flex: 1; }
 kbd { min-width: 19px; height: 18px; display: grid; place-items: center; color: #c3c9bc; font: 8px var(--mono); background: #232821; border: 1px solid #383e35; border-radius: 3px; }
@@ -161,26 +162,33 @@ kbd { min-width: 19px; height: 18px; display: grid; place-items: center; color: 
 @media (max-width: 650px) {
   .page-shell { width: min(100% - 34px, 500px); }
   .topbar { height: 66px; }
-  .game-layout { display: flex; flex-direction: column; align-items: stretch; gap: 25px; padding: 35px 0 30px; }
-  .game-intro { display: grid; grid-template-columns: 1fr auto; align-items: end; column-gap: 10px; }
-  .eyebrow { grid-column: 1 / -1; margin-bottom: 12px; }
-  h1 { font-size: 47px; letter-spacing: -3px; }
-  .intro-copy, .status-line { display: none; }
-  .stats-row { gap: 14px; padding-bottom: 5px; }
+  .game-layout { display: flex; flex-direction: column; align-items: stretch; gap: 14px; padding: 18px 0 22px; }
+  .game-intro { width: 100%; align-self: stretch; display: flex; align-items: center; }
+  .eyebrow, .game-intro h1, .intro-copy, .status-line { display: none; }
+  .stats-row { width: 100%; justify-content: space-between; gap: 14px; padding: 0 4px; }
   .stat-label { font-size: 8px; }
   .stat-card strong { font-size: 21px; }
-  .stat-divider { height: 29px; }
-  .game-panel { padding: 10px; }
-  .panel-bottom { gap: 11px; font-size: 6px; }
-  .help-card { margin: -5px 0 0; }
+  .stat-divider { height: 27px; }
+  .game-panel { padding: 9px; }
+  .panel-top { height: 44px; align-items: flex-start; justify-content: flex-end; }
+  .panel-label, .panel-bottom { display: none; }
+  .icon-button { width: 38px; height: 34px; border: 1px solid #373d34; border-radius: 6px; background: #20251e; font-size: 14px; touch-action: manipulation; }
+  .icon-button:active { color: var(--green); border-color: var(--green); }
+  .help-card { display: contents; }
+  .help-heading, .shortcut-row { display: none; }
+  .key-controls { width: 100%; margin: 0; padding: 12px 10px 10px; gap: 9px; background: #171b17; border: 1px solid #30362e; border-radius: 9px; }
+  .key-controls > div { width: 100%; gap: 9px; }
+  .key-controls button { width: calc((100% - 18px) / 3); height: 58px; border-radius: 8px; font-size: 23px; touch-action: manipulation; }
+  .key-controls > div button { flex: 1; height: 68px; }
   .page-footer { min-height: 54px; font-size: 6px; }
   .restart-button { font-size: 7px; }
 }
 
 @media (max-width: 370px) {
   .page-shell { width: calc(100% - 24px); }
-  .game-layout { gap: 19px; padding-top: 26px; }
-  .panel-bottom { gap: 7px; font-size: 5px; letter-spacing: .6px; }
-  .help-card { padding: 13px 10px; }
-  .help-heading h2 { font-size: 10px; }
+  .game-layout { gap: 11px; padding-top: 14px; }
+  .key-controls { padding: 9px 8px 8px; }
+  .key-controls > div { gap: 7px; }
+  .key-controls button { width: calc((100% - 14px) / 3); height: 52px; }
+  .key-controls > div button { height: 62px; }
 }
